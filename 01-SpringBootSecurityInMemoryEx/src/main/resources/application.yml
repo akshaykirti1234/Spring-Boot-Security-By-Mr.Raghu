@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 01-SpringBootSecurityInMemoryEx
+
+
+server:
+  port: 8085

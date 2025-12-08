@@ -1,0 +1,35 @@
+package tech.csm.controller;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+	@Bean
+	private BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
+	public UserDetailsService configAutentication(DataSource dataSource) {
+
+		UserDetails user1 = User.withUsername("sam").password("").authorities("ADMIN").build();
+		UserDetails user2 = User.withUsername("ram").password("").authorities("CUSTOMER").build();
+
+		JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+		user.createUser(user1);
+		user.createUser(user2);
+
+		return users;
+	}
+}

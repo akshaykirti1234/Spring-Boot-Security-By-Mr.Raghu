@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: 02-SpringSecurityJDBCAuthEx
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3360/boot6am
+    username: root
+    password: csmpl@123
+server:
+  port: 8085

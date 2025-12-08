@@ -1,0 +1,26 @@
+package tech.csm.service.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tech.csm.model.User;
+import tech.csm.repo.UserRepository;
+import tech.csm.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	public Optional<User> getUserByEmail(String email) {
+		return userRepository.findByUserEmail(email);
+	}
+
+	public User saveUser(User user) {
+		return userRepository.save(user);
+	}
+
+}

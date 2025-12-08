@@ -1,0 +1,25 @@
+package tech.csm.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class UserContoller {
+
+	@GetMapping("/home")
+	public String showHome() {
+		return "home";
+	}
+
+	@GetMapping("/hello")
+	public String showHello() {
+		return "hello";
+	}
+
+	@PostMapping("/login")
+	public String showLogin() {
+		return "login";
+	}
+
+}

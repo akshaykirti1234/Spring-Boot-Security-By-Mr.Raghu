@@ -1,0 +1,7 @@
+package tech.csm.service.impl;
+
+import tech.csm.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

@@ -1,0 +1,15 @@
+package tech.csm;
+
+import org.jspecify.annotations.Nullable;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password4j.BcryptPassword4jPasswordEncoder;
+
+public class Test {
+	
+	private void bcryptPasswordGenerator() {
+		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+		String pwd = bCryptPasswordEncoder.encode("sam");
+		System.out.println(pwd);
+	}
+	
+}

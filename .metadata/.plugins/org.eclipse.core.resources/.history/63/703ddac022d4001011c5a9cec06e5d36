@@ -1,0 +1,15 @@
+package tech.csm.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="usertab")
+public class User {
+	private Integer userId;
+	private String userName;
+	private String userEmail;
+	private Set<String> roles;
+}
