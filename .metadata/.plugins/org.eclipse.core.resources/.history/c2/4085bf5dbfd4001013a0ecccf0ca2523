@@ -1,0 +1,10 @@
+package tech.csm.service;
+
+import java.util.Optional;
+
+import tech.csm.model.User;
+
+public interface UserService {
+	public Optional<User> getUserByEmail(String email);
+	public User saveUser(User user);
+}
