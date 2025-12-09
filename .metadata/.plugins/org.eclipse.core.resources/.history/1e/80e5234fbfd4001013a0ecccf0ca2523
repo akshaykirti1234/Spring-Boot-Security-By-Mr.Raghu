@@ -1,7 +1,0 @@
-package tech.csm.service;
-
-import tech.csm.model.User;
-
-public interface UserService {
-	public User getUserByEmail(String email);
-}
