@@ -18,11 +18,42 @@ public class UserController {
 
 	@GetMapping("/")
 	public String getMethodName() {
+		return "home";
+	}
+
+	@GetMapping("/home")
+	public String showHome() {
+		return "home";
+	}
+
+	@GetMapping("/hello")
+	public String showHello() {
+		return "hello";
+	}
+
+	@GetMapping("/login")
+	public String showLogin() {
+		return "login";
+	}
+
+	@GetMapping("/register")
+	public String showRegister() {
 		return "Register";
+	}
+
+	@GetMapping("/admin")
+	public String showAdmin() {
+		return "admin";
+	}
+
+	@GetMapping("/customer")
+	public String showCustomer() {
+		return "customer";
 	}
 
 	@PostMapping("/saveUser")
 	public String saveUser(@ModelAttribute User user, Model model) {
+		System.out.println("==========================" + user + "=================");
 		User saveUser = userService.saveUser(user);
 		model.addAttribute("message", "User save with id : " + saveUser.getUserId());
 		return "Register";

@@ -6,12 +6,12 @@
     <body>
         <h1>Register Page</h1>
 		
-		<form th:action="@{/user/save}" method="post">
+		<form th:action="@{/saveUser}" method="post">
 			<pre>
 				Name: <input type="text" name="userName"/>
 				Mail: <input type="text" name="userEmail"/>
 				Password: <input type="password" name="userPassword"/>
-				Roles: <input type="checkbox" value="ADMIN">ADMIN  &nbsp; <input type="checkbox" value="CUSTOMER">CUSTOMER
+				Roles: <input type="checkbox" name="userRoles" value="ADMIN">ADMIN  &nbsp; <input type="checkbox" name="userRoles" value="CUSTOMER">CUSTOMER
 				<input type="submit" value="submit"/>
 			</pre>
 		</form>
