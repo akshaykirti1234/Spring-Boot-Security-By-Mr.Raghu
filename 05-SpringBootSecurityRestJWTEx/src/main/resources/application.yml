@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 05-SpringBootSecurityRestJWTEx
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boot6am
+    username: root
+    password: csmpl@123
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8085
+app:
+  secret: My-Secret-Key
